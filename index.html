@@ -3,181 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comunicado Oficial - BancredCard</title>
+  <title>Comunicado Oficial - Bancred Card</title>
   <style>
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f4f6f9;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: #f5f5f5;
       margin: 0;
       padding: 40px;
       display: flex;
       justify-content: center;
     }
 
-    .document {
+    .container {
       background: #fff;
-      padding: 60px 50px;
       border: 1px solid #ddd;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
       max-width: 800px;
-      width: 100%;
+      padding: 40px 50px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     }
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin-bottom: 40px;
+    .logo {
       text-align: center;
+      margin-bottom: 30px;
     }
 
-    header img {
-      height: 100px;
-      width: auto;
-      margin-bottom: 10px;
+    .logo img {
+      width: 240px;
+      height: auto;
     }
 
-    header h1 {
-      font-size: 1.8rem;
-      color: #0f172a;
-      margin: 0;
-    }
-
-    .subtitle {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      color: #6b7280;
-      letter-spacing: 0.05em;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      color: #b91c1c;
+    h1 {
+      font-size: 1.1rem;
       text-align: center;
+      font-weight: 700;
+      color: #3a3a3a;
       text-transform: uppercase;
-      border-bottom: 2px solid #b91c1c;
-      display: inline-block;
-      padding-bottom: 4px;
-      margin: 0 auto 24px;
+      margin-bottom: 30px;
+    }
+
+    h1 span {
+      color: #a17400;
     }
 
     p {
-      color: #1f2937;
+      font-size: 0.95rem;
       line-height: 1.6;
-      margin-bottom: 16px;
-      text-align: justify;
-      font-size: 1rem;
+      color: #333;
     }
 
-    .alert {
-      background-color: #fef2f2;
-      border-left: 5px solid #b91c1c;
-      padding: 14px 18px;
-      border-radius: 8px;
+    .highlight {
+      background: #fef3c7;
+      border-left: 5px solid #f59e0b;
+      padding: 10px 15px;
       margin: 20px 0;
-    }
-
-    .alert strong {
-      color: #b91c1c;
-    }
-
-    ul {
-      margin: 12px 0 20px 24px;
-    }
-
-    ul li {
-      margin-bottom: 6px;
-    }
-
-    footer {
-      margin-top: 50px;
-      border-top: 1px solid #e5e7eb;
-      padding-top: 20px;
-      text-align: center;
       font-size: 0.9rem;
-      color: #374151;
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section h2 {
+      color: #a17400;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-box {
+      border: 1px solid #ccc;
+      background: #fafafa;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .section-box ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .section-box li {
+      margin-bottom: 5px;
+    }
+
+    .footer-note {
+      margin-top: 25px;
+      border: 1px solid #ccc;
+      background: #f9fafb;
+      padding: 14px 18px;
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     .signature {
-      margin-top: 50px;
       text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
     }
 
-    .signature .line {
-      width: 250px;
-      height: 1px;
-      background-color: #000;
-      margin: 0 auto 6px;
+    .signature hr {
+      width: 50%;
+      margin: 25px auto 10px;
+      border: none;
+      border-top: 1px solid #000;
     }
 
-    .signature p {
-      margin: 0;
-      line-height: 1.4;
-      font-size: 0.95rem;
+    .signature strong {
+      display: block;
+      margin-top: 5px;
     }
 
-    .cnpj {
-      font-weight: 600;
-      color: #0f172a;
-    }
-
-    @media print {
-      body {
-        background: #fff;
-        padding: 0;
-      }
-      .document {
-        box-shadow: none;
-        border: none;
-        padding: 40px;
-      }
+    @media (max-width: 600px) {
+      body { padding: 20px; }
+      .container { padding: 25px; }
+      .logo img { width: 180px; }
     }
   </style>
 </head>
 <body>
-  <div class="document">
-    <header>
-      <img src="Logo Bancred.jpg" alt="Logo Bancred">
-      <div class="subtitle">Comunicado oficial</div>
-      <h1>BancredCard</h1>
-    </header>
-
-    <h2>Alerta de Tentativa de Golpe</h2>
-
-    <p>
-      Informamos que terceiros estão tentando aplicar golpes utilizando indevidamente o nome e/ou o 
-      <span class="cnpj">CNPJ da nossa empresa</span>.
-    </p>
-
-    <div class="alert">
-      <strong>Atenção:</strong> nossa empresa <u>não solicita</u> pagamentos, depósitos ou transferências de valores
-      por canais não oficiais.
+  <div class="container">
+    <div class="logo">
+      <img src="Logo Bancred.jpg" alt="Bancred Card Logo">
     </div>
 
-    <p>Para sua segurança, siga as orientações abaixo:</p>
-    <ul>
-      <li>Confirme sempre os dados da empresa antes de realizar qualquer pagamento;</li>
-      <li>Desconsidere boletos ou cobranças enviadas por e-mails ou números de WhatsApp desconhecidos;</li>
-      <li>Entre em contato pelos canais oficiais da empresa para confirmar qualquer informação.</li>
-    </ul>
+    <h1>Comunicado Oficial — <span>Alerta sobre Fraudes e Uso Indevido de Nossa Razão Social</span></h1>
 
     <p>
-      Caso você tenha recebido alguma mensagem suspeita em nosso nome, pedimos que entre em contato imediatamente
-      para que possamos tomar as providências cabíveis.
+      A <strong>Bancred Card Serviços Financeiros Ltda.</strong> informa que terceiros estão utilizando indevidamente o nome,
+      a marca e o <strong>CNPJ</strong> da empresa para aplicar golpes, especialmente envolvendo <strong>ofertas falsas de empréstimos e envio de boletos falsos</strong>.
     </p>
 
-    <footer>
-      Este comunicado tem caráter informativo e preventivo.<br>
-      CNPJ oficial: <span class="cnpj">00.000.000/0001-00</span>.
-    </footer>
+    <div class="highlight">
+      <strong>Atenção:</strong> Nossa empresa <strong>não solicita pagamentos, depósitos ou transferências</strong> nem exige envio de valores ou dados pessoais por canais não oficiais.
+      Todo e qualquer contato legítimo é realizado exclusivamente por nossos meios oficiais, devidamente divulgados em nosso site e canais institucionais.
+    </div>
+
+    <div class="section">
+      <h2>Recomendações de Segurança</h2>
+      <div class="section-box">
+        <ol>
+          <li>Verifique sempre os dados da empresa antes de efetuar qualquer pagamento ou assinatura de contrato;</li>
+          <li>Desconsidere mensagens, boletos ou cobranças enviadas por e-mail ou números de WhatsApp desconhecidos;</li>
+          <li>Entre em contato com os canais oficiais da empresa para confirmar a veracidade de qualquer informação recebida;</li>
+          <li>Nunca compartilhe senhas, documentos pessoais ou comprovantes de pagamento sem confirmação de legitimidade;</li>
+          <li>Caso tenha sido vítima de tentativa de fraude, registre um boletim de ocorrência e nos informe imediatamente.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Canais Oficiais de Atendimento</h2>
+      <div class="section-box">
+        <p><strong>E-mail:</strong> contato@bancredcard.com.br<br>
+        <strong>Telefone:</strong> (11) 3000-0000<br>
+        <strong>Site:</strong> www.bancredcard.com.br</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Observação Legal</h2>
+      <div class="footer-note">
+        Este comunicado possui caráter <strong>oficial, informativo e preventivo</strong>, e tem como finalidade resguardar a imagem da empresa e proteger consumidores contra golpes praticados por terceiros.<br>
+        CNPJ oficial da empresa: <strong>00.000.000/0001-00</strong>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Denuncie Tentativas de Fraude</h2>
+      <div class="section-box">
+        Se você recebeu mensagem suspeita ou proposta de empréstimo em nome da nossa empresa,
+        entre em contato conosco imediatamente para que possamos tomar as medidas cabíveis junto às autoridades competentes.
+      </div>
+    </div>
 
     <div class="signature">
-      <div class="line"></div>
-      <p><strong>Dra. Nome Fictício</strong></p>
-      <p>OAB 000000/SP</p>
+      <hr>
+      <strong>Dra. Mariana de Souza</strong>
+      OAB/SP 000000
     </div>
   </div>
 </body>
