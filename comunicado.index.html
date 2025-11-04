@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comunicado Oficial</title>
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --danger: #b91c1c;
+      --danger-soft: #fef2f2;
+      --accent: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px 48px;
+    }
+
+    .wrapper {
+      width: min(900px, 100%);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    header img {
+      height: 64px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    header .company-name {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+      border: 1px solid rgba(15, 23, 42, 0.03);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badge-alerta {
+      background: var(--danger-soft);
+      color: var(--danger);
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .alert-box {
+      background: var(--danger-soft);
+      border: 1px solid rgba(185, 28, 28, 0.25);
+      border-left-width: 5px;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 16px 0 20px;
+    }
+
+    .alert-box strong {
+      color: var(--danger);
+    }
+
+    .list-title {
+      font-weight: 600;
+      margin-top: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1.1rem;
+      margin-top: 0.4rem;
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .cnpj {
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 20px 16px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      header img {
+        height: 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <!-- Substitua logo.png pela sua logo -->
+      <img src="logo.png" alt="Logo da empresa">
+      <div>
+        <div class="company-name">Nome da Empresa</div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="badge-alerta">Comunicado importante</div>
+      <h1>Alerta sobre tentativa de golpe</h1>
+      <p>
+        Informamos que terceiros estão tentando aplicar golpes utilizando indevidamente o nome e/ou o 
+        <span class="cnpj">CNPJ da nossa empresa</span>.
+      </p>
+
+      <div class="alert-box">
+        <strong>Atenção:</strong> nossa empresa <u>não</u> solicita pagamentos, depósitos ou transferência de valores
+        por canais não oficiais.
+      </div>
+
+      <p class="list-title">Para sua segurança:</p>
+      <ul>
+        <li>confirme sempre os dados da empresa antes de qualquer pagamento;</li>
+        <li>desconsidere boletos ou cobranças enviados por e-mail ou WhatsApp de números desconhecidos;</li>
+        <li>entre em contato pelos canais oficiais da empresa para validar qualquer informação.</li>
+      </ul>
+
+      <p>
+        Caso você tenha recebido alguma mensagem suspeita em nosso nome, pedimos que nos avise imediatamente
+        para que possamos tomar as providências cabíveis.
+      </p>
+
+      <footer>
+        Este comunicado tem caráter informativo e preventivo.  
+        CNPJ oficial: <span class="cnpj">00.000.000/0001-00</span>.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
