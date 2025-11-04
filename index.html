@@ -3,180 +3,181 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comunicado Oficial</title>
+  <title>Comunicado Oficial - BancredCard</title>
   <style>
-    :root {
-      --bg: #f3f4f6;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --danger: #b91c1c;
-      --danger-soft: #fef2f2;
-      --accent: #0f172a;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f4f6f9;
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      padding: 40px;
       display: flex;
       justify-content: center;
-      padding: 24px 16px 48px;
     }
 
-    .wrapper {
-      width: min(900px, 100%);
+    .document {
+      background: #fff;
+      padding: 60px 50px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      max-width: 800px;
+      width: 100%;
     }
 
     header {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 20px;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 40px;
+      text-align: center;
     }
 
     header img {
-      height: 128px;
+      height: 100px;
       width: auto;
-      object-fit: contain;
+      margin-bottom: 10px;
     }
 
-    header .company-name {
-      font-weight: 600;
-      font-size: 1rem;
-      letter-spacing: 0.03em;
+    header h1 {
+      font-size: 1.8rem;
+      color: #0f172a;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
       text-transform: uppercase;
-      color: var(--muted);
+      color: #6b7280;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
     }
 
-    .card {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-      border: 1px solid rgba(15, 23, 42, 0.03);
-    }
-
-    h1 {
-      margin-top: 0;
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      letter-spacing: -0.01em;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .badge-alerta {
-      background: var(--danger-soft);
-      color: var(--danger);
-      font-weight: 600;
-      font-size: 0.78rem;
+    h2 {
+      font-size: 1.4rem;
+      color: #b91c1c;
+      text-align: center;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      border-bottom: 2px solid #b91c1c;
       display: inline-block;
-      padding: 6px 12px;
-      border-radius: 9999px;
-      margin-bottom: 12px;
+      padding-bottom: 4px;
+      margin: 0 auto 24px;
     }
 
     p {
+      color: #1f2937;
       line-height: 1.6;
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
+      text-align: justify;
+      font-size: 1rem;
     }
 
-    .alert-box {
-      background: var(--danger-soft);
-      border: 1px solid rgba(185, 28, 28, 0.25);
-      border-left-width: 5px;
-      border-radius: 12px;
-      padding: 14px 16px;
-      margin: 16px 0 20px;
+    .alert {
+      background-color: #fef2f2;
+      border-left: 5px solid #b91c1c;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 20px 0;
     }
 
-    .alert-box strong {
-      color: var(--danger);
-    }
-
-    .list-title {
-      font-weight: 600;
-      margin-top: 1.2rem;
-      margin-bottom: 0.3rem;
+    .alert strong {
+      color: #b91c1c;
     }
 
     ul {
-      padding-left: 1.1rem;
-      margin-top: 0.4rem;
+      margin: 12px 0 20px 24px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
     }
 
     footer {
-      margin-top: 18px;
-      font-size: 0.8rem;
-      color: var(--muted);
+      margin-top: 50px;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .signature {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .signature .line {
+      width: 250px;
+      height: 1px;
+      background-color: #000;
+      margin: 0 auto 6px;
+    }
+
+    .signature p {
+      margin: 0;
+      line-height: 1.4;
+      font-size: 0.95rem;
     }
 
     .cnpj {
       font-weight: 600;
-      color: var(--accent);
+      color: #0f172a;
     }
 
-    @media (max-width: 600px) {
-      .card {
-        padding: 20px 16px;
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
       }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      header img {
-        height: 52px;
+      .document {
+        box-shadow: none;
+        border: none;
+        padding: 40px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="document">
     <header>
-      <!-- Substitua logo.png pela sua logo -->
-      <img src="bancred-card-logo-png_seeklogo-170248.png" alt="Logo da empresa">
-      <div>
-        <div class="company-name">Bancred</div>
-      </div>
+      <img src="Logo Bancred.jpg" alt="Logo Bancred">
+      <div class="subtitle">Comunicado oficial</div>
+      <h1>BancredCard</h1>
     </header>
 
-    <div class="card">
-      <div class="badge-alerta">Comunicado importante</div>
-      <h1>Alerta sobre tentativa de golpe</h1>
-      <p>
-        Informamos que terceiros estão tentando aplicar golpes utilizando indevidamente o nome e/ou o 
-        <span class="cnpj">CNPJ da nossa empresa</span>.
-      </p>
+    <h2>Alerta de Tentativa de Golpe</h2>
 
-      <div class="alert-box">
-        <strong>Atenção:</strong> nossa empresa <u>não</u> solicita pagamentos, depósitos ou transferência de valores
-        por canais não oficiais.
-      </div>
+    <p>
+      Informamos que terceiros estão tentando aplicar golpes utilizando indevidamente o nome e/ou o 
+      <span class="cnpj">CNPJ da nossa empresa</span>.
+    </p>
 
-      <p class="list-title">Para sua segurança:</p>
-      <ul>
-        <li>confirme sempre os dados da empresa antes de qualquer pagamento;</li>
-        <li>desconsidere boletos ou cobranças enviados por e-mail ou WhatsApp de números desconhecidos;</li>
-        <li>entre em contato pelos canais oficiais da empresa para validar qualquer informação.</li>
-      </ul>
+    <div class="alert">
+      <strong>Atenção:</strong> nossa empresa <u>não solicita</u> pagamentos, depósitos ou transferências de valores
+      por canais não oficiais.
+    </div>
 
-      <p>
-        Caso você tenha recebido alguma mensagem suspeita em nosso nome, pedimos que nos avise imediatamente
-        para que possamos tomar as providências cabíveis.
-      </p>
+    <p>Para sua segurança, siga as orientações abaixo:</p>
+    <ul>
+      <li>Confirme sempre os dados da empresa antes de realizar qualquer pagamento;</li>
+      <li>Desconsidere boletos ou cobranças enviadas por e-mails ou números de WhatsApp desconhecidos;</li>
+      <li>Entre em contato pelos canais oficiais da empresa para confirmar qualquer informação.</li>
+    </ul>
 
-      <footer>
-        Este comunicado tem caráter informativo e preventivo.  
-        CNPJ oficial: <span class="cnpj">00.000.000/0001-00</span>.
-      </footer>
+    <p>
+      Caso você tenha recebido alguma mensagem suspeita em nosso nome, pedimos que entre em contato imediatamente
+      para que possamos tomar as providências cabíveis.
+    </p>
+
+    <footer>
+      Este comunicado tem caráter informativo e preventivo.<br>
+      CNPJ oficial: <span class="cnpj">00.000.000/0001-00</span>.
+    </footer>
+
+    <div class="signature">
+      <div class="line"></div>
+      <p><strong>Dra. Nome Fictício</strong></p>
+      <p>OAB 000000/SP</p>
     </div>
   </div>
 </body>
